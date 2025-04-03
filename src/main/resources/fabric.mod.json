@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "craftminefix",
+	"version": "${version}",
+	"name": "CraftMineFix",
+	"description": "Fixes some critical issues with the 2025 april fools",
+	"authors": [
+		"DialingSpoon"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/craftminefix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.dialingspoon.craftminefix.CraftMineFix"
+		]
+	},
+	"mixins": [
+		"craftminefix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
