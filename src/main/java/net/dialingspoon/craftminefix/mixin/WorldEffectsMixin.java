@@ -14,8 +14,7 @@ public class WorldEffectsMixin {
     @Redirect(method = "method_70146", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Holder;is(Lnet/minecraft/tags/TagKey;)Z"))
     private static boolean redirectIsBadlands(Holder instance, TagKey<Biome> tagKey) {
         if (tagKey == BiomeTags.IS_BADLANDS) {
-            System.out.println(instance.getRegisteredName().endsWith("badlands"));
-            return true;
+            return instance.getRegisteredName().endsWith("badlands");
         }
         else throw new RuntimeException("Unexpected Biome: " + instance.getRegisteredName() );
     }

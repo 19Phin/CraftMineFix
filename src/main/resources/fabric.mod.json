@@ -8,7 +8,8 @@
 		"DialingSpoon"
 	],
 	"contact": {
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"issues": "https://github.com/19Phin/CraftMineFix/issues",
+		"sources": "https://github.com/19Phin/CraftMineFix"
 	},
 	"license": "MIT",
 	"icon": "assets/craftminefix/icon.png",
