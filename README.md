@@ -5,3 +5,4 @@ If you have any more suggestions of things to fix, please leave a comment, or a 
 
 ### Current Fixes:
 - "DRY LAND" world effect was unobtainable.
+- shields now actually function.
