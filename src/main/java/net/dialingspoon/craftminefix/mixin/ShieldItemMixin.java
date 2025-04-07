@@ -1,5 +1,6 @@
 package net.dialingspoon.craftminefix.mixin;
 
+import net.dialingspoon.craftminefix.Config;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -18,9 +19,11 @@ public class ShieldItemMixin extends Item {
     }
 
     @Inject(method = "use", at = @At(value = "RETURN"), cancellable = true)
-    private void use(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResult> cir) {
-        player.startUsingItem(interactionHand);
-        cir.setReturnValue(InteractionResult.CONSUME);
+    private void useShield(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResult> cir) {
+        if (Config.SHIELDS_ENABLED) {
+            player.startUsingItem(interactionHand);
+            cir.setReturnValue(InteractionResult.CONSUME);
+        }
     }
 
 }

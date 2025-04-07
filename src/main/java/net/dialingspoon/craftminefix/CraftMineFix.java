@@ -10,5 +10,6 @@ public class CraftMineFix implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Config.load();
 	}
 }

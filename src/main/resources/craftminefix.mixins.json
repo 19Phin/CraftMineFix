@@ -1,12 +1,17 @@
 {
-	"required": true,
-	"package": "net.dialingspoon.craftminefix.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ShieldItemMixin",
-		"WorldEffectsMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "net.dialingspoon.craftminefix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BattleMixin",
+    "BlocksMixin",
+    "EntityMixin",
+    "ItemMixin",
+    "ServerLevelMixin",
+    "ShieldItemMixin",
+    "WorldEffectsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
