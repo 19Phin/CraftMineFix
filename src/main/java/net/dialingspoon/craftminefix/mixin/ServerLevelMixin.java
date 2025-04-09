@@ -24,13 +24,20 @@ public class ServerLevelMixin {
             for (ItemStack itemStack : instance) {
                 if (itemStack.has(DataComponents.BUNDLE_CONTENTS)) {
                     var contents = itemStack.get(DataComponents.BUNDLE_CONTENTS);
-                    if (contents != null) flattened.addAll((Collection<? extends ItemStack>) contents.items());
+                    if (contents != null) {
+                        List<ItemStack> items = new ArrayList<>();
+                        contents.items().iterator().forEachRemaining(items::add);
+                        flattened.addAll(items);
+                    }
                 }
 
                 if (itemStack.has(DataComponents.CONTAINER)) {
                     var container = itemStack.get(DataComponents.CONTAINER);
-                    if (container != null)
-                        flattened.addAll((Collection<? extends ItemStack>) container.nonEmptyItems());
+                    if (container != null) {
+                        List<ItemStack> items = new ArrayList<>();
+                        container.nonEmptyItems().iterator().forEachRemaining(items::add);
+                        flattened.addAll(items);
+                    }
                 }
 
                 flattened.add(itemStack);
