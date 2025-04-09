@@ -7,9 +7,12 @@ Fixes can be toggled in config/craftminefix.config. fixes that make the game mor
 ### Current Fixes:
 - "DRY LAND" world effect is obtainable.
 - Shields now actually function.
+- "Dragon Fire" unlock is obtainable
+- Objects in bundles and shulker boxes are properly rewarded when exiting
+- Mobs in battles no longer can spawn above a bedrock roof
+- Incompatible modifiers can no longer be applied by selectively removing modifiers
 - Changed wording from "one heart" to "one HP"
 - Minecrafter can no longer be exploded, softlocking the game
 - "Wither Skeletons" world effect now uses wither skeleton spawn egg
-- Objects in bundles and shulker boxes are properly rewarded when exiting
 - Can't hotswap armor before unlocking "Armaments"
 - Battles can no longer be cheesed by leaving and returning

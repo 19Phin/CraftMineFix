@@ -15,9 +15,12 @@ public class Config {
 
     public static boolean DRY_LAND_ENABLED;
     public static boolean SHIELDS_ENABLED;
+    public static boolean DRAGON_FIRE_ENABLED;
+    public static boolean BUNDLED_REWARDS_ENABLED;
+    public static boolean PREVENT_ROOF_SPAWNS;
+    public static boolean PREVENT_INCOMPATIBLES;
     public static boolean EXPLOSION_RESIST_ENABLED;
     public static boolean WITHER_SKELETON_EGG;
-    public static boolean BUNDLED_REWARDS_ENABLED;
     public static boolean ARMOR_ENABLED;
     public static boolean BATTLES_FIX_ENABLED;
 
@@ -25,11 +28,15 @@ public class Config {
     static {
         DEFAULTS.put("dry_land", true);
         DEFAULTS.put("shields", true);
+        DEFAULTS.put("dragon_fire", true);
+        DEFAULTS.put("bundled_rewards", true);
+        DEFAULTS.put("prevent_roof_battles", true);
+        DEFAULTS.put("prevent_incompatible_modifiers", true);
         DEFAULTS.put("explosion_resistance", true);
         DEFAULTS.put("wither_skeleton_egg", true);
-        DEFAULTS.put("bundled_rewards", true);
         DEFAULTS.put("armor", false);
         DEFAULTS.put("battles", false);
+        load();
     }
 
     private static final Map<String, Boolean> values = new LinkedHashMap<>();
@@ -77,6 +84,7 @@ public class Config {
 
         DRY_LAND_ENABLED         = values.get("dry_land");
         SHIELDS_ENABLED          = values.get("shields");
+        DRAGON_FIRE_ENABLED      = values.get("dragon_fire");
         EXPLOSION_RESIST_ENABLED = values.get("explosion_resistance");
         WITHER_SKELETON_EGG      = values.get("wither_skeleton_egg");
         BUNDLED_REWARDS_ENABLED  = values.get("bundled_rewards");

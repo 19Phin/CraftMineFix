@@ -7,8 +7,11 @@
     "BlocksMixin",
     "EntityMixin",
     "ItemMixin",
+    "MineCraftingSlotMixin",
+    "PlayerUnlocksMixin",
     "ServerLevelMixin",
     "ShieldItemMixin",
+    "SpawnStrategyMixin",
     "WorldEffectsMixin"
   ],
   "injectors": {

@@ -9,7 +9,5 @@ public class CraftMineFix implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
-	public void onInitialize() {
-		Config.load();
-	}
+	public void onInitialize() {}
 }
