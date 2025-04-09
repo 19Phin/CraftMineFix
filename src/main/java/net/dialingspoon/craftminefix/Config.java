@@ -24,8 +24,12 @@ public class Config {
     public static boolean ARMOR_ENABLED;
     public static boolean BATTLES_FIX_ENABLED;
 
-    private static final Map<String, Boolean> DEFAULTS = new LinkedHashMap<>();
+    private static final Map<String, Boolean> DEFAULTS;
+    private static final Map<String, Boolean> values;
+
     static {
+        DEFAULTS = new LinkedHashMap<>();
+        values = new LinkedHashMap<>();
         DEFAULTS.put("dry_land", true);
         DEFAULTS.put("shields", true);
         DEFAULTS.put("dragon_fire", true);
@@ -38,8 +42,6 @@ public class Config {
         DEFAULTS.put("battles", false);
         load();
     }
-
-    private static final Map<String, Boolean> values = new LinkedHashMap<>();
 
     public static void load() {
         try {
