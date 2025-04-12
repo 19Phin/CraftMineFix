@@ -14,6 +14,7 @@ public class Config {
     private static final Path CONFIG_PATH = Paths.get("config", "craftminefix.config");
 
     public static boolean DRY_LAND_ENABLED;
+    public static boolean NO_DROPS_ENABLED;
     public static boolean SHIELDS_ENABLED;
     public static boolean DRAGON_FIRE_ENABLED;
     public static boolean BUNDLED_REWARDS_ENABLED;
@@ -31,6 +32,7 @@ public class Config {
         DEFAULTS = new LinkedHashMap<>();
         values = new LinkedHashMap<>();
         DEFAULTS.put("dry_land", true);
+        DEFAULTS.put("no_drops", true);
         DEFAULTS.put("shields", true);
         DEFAULTS.put("dragon_fire", true);
         DEFAULTS.put("bundled_rewards", true);
@@ -85,6 +87,7 @@ public class Config {
         }
 
         DRY_LAND_ENABLED         = values.get("dry_land");
+        NO_DROPS_ENABLED         = values.get("no_drops");
         SHIELDS_ENABLED          = values.get("shields");
         DRAGON_FIRE_ENABLED      = values.get("dragon_fire");
         EXPLOSION_RESIST_ENABLED = values.get("explosion_resistance");

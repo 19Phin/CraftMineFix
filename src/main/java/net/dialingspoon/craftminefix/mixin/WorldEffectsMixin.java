@@ -8,7 +8,9 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.UnlockCondition;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.mines.WorldEffect;
 import net.minecraft.world.level.mines.WorldEffects;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -46,5 +48,26 @@ public class WorldEffectsMixin {
             return Items.WITHER_SKELETON_SPAWN_EGG;
         }
         return item;
+    }
+
+    @WrapOperation(
+            method = "<clinit>",
+            slice = @Slice(
+                    from = @At(
+                            value = "CONSTANT",
+                            args = "stringValue=no_drops"
+                    )
+            ),
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/level/mines/WorldEffect$Builder;register()Lnet/minecraft/world/level/mines/WorldEffect;",
+                    ordinal = 0
+            )
+    )
+    private static WorldEffect rarelyAward(WorldEffect.Builder instance, Operation<WorldEffect> original) {
+        if (Config.NO_DROPS_ENABLED) {
+            return original.call(instance.unlockedBy(UnlockCondition.playerKilledEntity((serverLevel, serverPlayer, entity) -> serverLevel.getRandom().nextFloat() < 0.005f)));
+        }
+        return original.call(instance);
     }
 }

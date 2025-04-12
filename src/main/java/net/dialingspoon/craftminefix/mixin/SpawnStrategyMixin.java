@@ -14,7 +14,7 @@ public class SpawnStrategyMixin {
     @WrapMethod(method = "isOkSpawnSpace")
     private static boolean notOnBedrock(ServerLevel serverLevel, BlockPos blockPos, Operation<Boolean> original) {
         if (Config.PREVENT_ROOF_SPAWNS) {
-            return original.call(serverLevel, blockPos) && serverLevel.getBlockState(blockPos.below()).getBlock() == Blocks.BEDROCK;
+            return original.call(serverLevel, blockPos) && serverLevel.getBlockState(blockPos.below()).getBlock() != Blocks.BEDROCK;
         }
         return original.call(serverLevel, blockPos);
     }

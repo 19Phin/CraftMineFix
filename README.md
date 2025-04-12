@@ -6,6 +6,7 @@ Fixes can be toggled in config/craftminefix.config. fixes that make the game mor
 
 ### Current Fixes:
 - "DRY LAND" world effect is obtainable.
+- "NO DROPS" world effect is obtainable.
 - Shields now actually function.
 - "Dragon Fire" unlock is obtainable
 - Objects in bundles and shulker boxes are properly rewarded when exiting
