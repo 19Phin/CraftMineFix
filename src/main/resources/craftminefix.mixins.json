@@ -5,13 +5,17 @@
   "mixins": [
     "BattleMixin",
     "BlocksMixin",
+    "DimensionTypeMixin",
     "EntityMixin",
     "ItemMixin",
     "MineCraftingSlotMixin",
+    "PlayerMixin",
     "PlayerUnlocksMixin",
     "ServerLevelMixin",
     "ShieldItemMixin",
     "SpawnStrategyMixin",
+    "StageFourMixin",
+    "WardenMixin",
     "WorldEffectsMixin"
   ],
   "injectors": {

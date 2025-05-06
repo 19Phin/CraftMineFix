@@ -8,12 +8,17 @@ Fixes can be toggled in config/craftminefix.config. fixes that make the game mor
 - "DRY LAND" world effect is obtainable.
 - "NO DROPS" world effect is obtainable.
 - Shields now actually function.
-- "Dragon Fire" unlock is obtainable
-- Objects in bundles and shulker boxes are properly rewarded when exiting
-- Mobs in battles no longer can spawn above a bedrock roof
-- Incompatible modifiers can no longer be applied by selectively removing modifiers
-- Changed wording from "one heart" to "one HP"
-- Minecrafter can no longer be exploded, softlocking the game
-- "Wither Skeletons" world effect now uses wither skeleton spawn egg
-- Can't hotswap armor before unlocking "Armaments"
-- Battles can no longer be cheesed by leaving and returning
+- Warden Boss Fight prompts and despawns properly.
+- You can now place water buckets in cave worlds.
+- "Dragon Fire" unlock is obtainable.
+- Objects in bundles and shulker boxes are properly rewarded when exiting.
+- Mobs in battles no longer can spawn above a bedrock roof.
+- Incompatible modifiers can no longer be applied by selectively removing modifiers.
+- Changed wording from "one heart" to "one HP".
+- Minecrafter can no longer be exploded, softlocking the game.
+- "Wither Skeletons" world effect now uses wither skeleton spawn egg.
+- Rabbit modifier no longer spawns parrots instead.
+- Efficient enchanting now properly cycles enchantments.
+- Panda, Parrot, and Rabbit Modifiers no longer spawn with the frequency of Hostile mobs.
+- Can't hotswap armor before unlocking "Armaments".
+- Battles can no longer be cheesed by leaving and returning.
